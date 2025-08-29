@@ -1,0 +1,102 @@
+/* 전체 로그인 컨테이너 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+/* 어두운 배경 오버레이 (이미지만 어둡게) */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 이미지 어둡게 */
+  z-index: 0;
+}
+
+/* 로그인 박스 */
+.login-box {
+  position: relative;
+  z-index: 1; /* 배경보다 위에 */
+  width: 360px;
+  padding: 50px 40px;
+  /* background-color: rgba(255, 255, 255); /* 반투명 블랙 */
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(4px); /* 배경 흐림 효과 */
+}
+
+/* 로고 및 슬로건 */
+.logo-section {
+  margin-bottom: 30px;
+}
+
+.stayj-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.slogan1,
+.slogan2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin: 4px 0;
+}
+
+/* 폼 섹션 */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-input {
+  background-color: rgba(255, 255, 255, 0); /* 완전 투명 */
+  color: white;
+  height: 50px; /* 세로 크기 증가 (원하는 값으로 조절) */
+  font-size: 16px; /* 글씨 크기도 약간 키움 */
+  border: 1px solid #bbb; /* 테두리 추가(선택사항) */
+  border-radius: 6px;      /* 모서리 둥글게(선택사항) */
+  padding: 0 14px;         /* 좌우 여백 */
+}
+
+.login-input::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}
+
+/* 로그인 버튼 */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #5eb74a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #4a9e3a;
+}
+
+/* 회원가입 링크 섹션 */
+.links-section {
+  margin-top: 20px;
+}
+
+.link-text {
+  font-size: 14px;
+  color: #cdd1d0;
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,403 @@
+/* 게스트 페이지 전체 컨테이너 */
+.guest-page-container {
+  font-family: 'Sweet', 'Noto Sans KR', sans-serif;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* 헤더 */
+.guest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.guest-logo {
+  height: 80px;
+  cursor: pointer;
+}
+
+.guest-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.write-review-btn { 
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1.0rem; /* 크기 조정: 내부 여백 증가 */
+    border: none;
+    border-radius: 0.8rem; /* 모서리 둥글게 */
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.9rem; /* 폰트 크기 */
+    font-weight: 500; /* 폰트 두께 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 은은한 그림자 */
+
+}
+
+.deleteBtn {
+  background-color: #e53935; /* 예: 빨간색 배경 */
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #c62828;
+}
+
+
+.delete-review-btn { 
+    background-color: #cf646f;
+    color: white;
+    padding: 0.5rem 1rem; /* 크기 조정: 내부 여백 증가 */
+    border: none;
+    border-radius: 0.8rem; /* 모서리 둥글게 */
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.9rem; /* 폰트 크기 */
+    font-weight: 500; /* 폰트 두께 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 은은한 그림자 */
+
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #003bb3;
+  background-color: transparent;
+}
+
+.guest-profile-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  /* background-color: black;  ← 제거 */
+  /* padding: 20px;            ← 제거 */
+}
+
+/* 텍스트 박스를 글자 크기만큼만 */
+.page-title h1{
+  background-color: #000;
+  color: #fff;
+  width: fit-content;      /* ✅ 내용 너비만큼 */
+  padding: 25px 30px;       /* 여백으로 위/아래/양옆 조절 */
+  margin: 0 auto 6px auto;       /* h1 아래 간격 */
+  display: block;          /* ✅ 각 줄로 떨어지게(가로로 안 붙음) */
+  font-weight: 700;
+  font-size: 50px !important ;     
+      /* 필요 시 조절 */
+}
+.page-title p {
+  color: #000000;
+  width: fit-content;      /* ✅ 내용 너비만큼 */
+  padding: 6px 10px;       /* 여백으로 위/아래/양옆 조절 */
+  margin: 0 auto 6px auto;       /* h1 아래 간격 */
+  display: block;          /* ✅ 각 줄로 떨어지게(가로로 안 붙음) */
+  font-weight: bold;        /* 필요 시 조절 */
+}
+
+/* 원래 크기 설정 유지 */
+.page-title h1 { font-size: 32px; }
+.page-title p  { font-size: 16px; font-weight: 300; margin-top: 0; }
+
+/* 정보 섹션 공통 스타일 */
+.info-section {
+  background-color: white;
+  border: none;
+  /* border-bottom: 4px solid #0a5738; */
+  padding: 30px;
+  margin-bottom: 30px;
+  
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+/* 회원 정보 수정 버튼 */
+.edit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn.cancel {
+  background-color: #ccc;
+  color: #666;
+  font-size: 16px;
+}
+
+.edit-btn:hover {
+  opacity: 0.9;
+}
+
+/* 회원 정보 그리드 */
+.user-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #666;
+  font-size: 14px;
+}
+
+.info-item input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.info-item p.value {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.info-item p.label {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 역할 배지 */
+.role-badge {
+  background-color: #e8f4fd;
+  color: #0066cc;
+  padding: 4px 8px;
+  border-radius: 0px;
+  font-size: 12px;
+}
+
+/* 저장 버튼 */
+.save-btn-container {
+  display: flex;
+  align-items: end;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 14px;
+  height: fit-content;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+/* 예약 내역 */
+.reservations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reservation-actions {
+  display: flex;
+  align-items: center;     /* 수직 중앙 정렬 */
+  gap: 1rem;               /* 인원과 버튼 사이 간격 */
+}
+
+
+.reservation-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 부드러운 그림자 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-card:hover {
+  transform: translateY(-5px); /* 호버 시 위로 살짝 이동 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* 그림자 더 진하게 */
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.reservation-title {
+  margin: 0 0 5px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.reservation-id {
+  margin: 0;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.people-count {
+  text-align: right;
+}
+
+.people-count p:first-child {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.people-count p:last-child {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 예약 날짜 그리드 */
+.reservation-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+.date-item p:first-child {
+  margin: 0 0 5px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.date-item p:last-child {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* 리뷰 섹션 */
+.review-section {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;           /* ✅ 둥글게 */
+  margin-top: 1rem;              /* 필요 시 카드와 간격 */
+}
+
+.review-comment {
+  margin: 0 0 12px 0;            /* ✅ 아래 여백 추가 */
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Sweet', 'Noto Sans KR', sans-serif;
+}
+
+.review-rating {
+  font-size: 14px;
+}
+
+/* 리뷰 없을 때 */
+.no-review {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 0px;
+  text-align: center;
+}
+
+.no-review p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 예약 취소 버튼 */
+.cancel-btn {
+  background-color: #cf646f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cancel-btn:hover:not(.disabled) {
+  background-color: #c82333;
+}
+
+.cancel-btn.disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 예약 없을 때 */
+.no-reservations {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.no-reservations p {
+  margin: 0;
+}
