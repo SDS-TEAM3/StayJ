@@ -6,3 +6,7 @@
 	path = StayJ_FE
 	url = https://github.com/SDS-TEAM3/StayJ_FE.git
 	branch = main
+[submodule "upload"]
+	path = upload
+	url = https://github.com/SDS-TEAM3/upload.git
+	branch = main
